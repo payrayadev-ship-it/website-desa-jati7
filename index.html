@@ -2,230 +2,296 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Desa Jatitujuh</title>
+<title>Website Resmi Desa Jatitujuh</title>
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-      scroll-behavior:smooth;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+  scroll-behavior:smooth;
+}
 
-    body{
-      background:#f5f7fb;
-      color:#222;
-    }
+body{
+  background:#f5f7fb;
+  color:#222;
+}
 
-    header{
-      background:#0057b8;
-      padding:15px 5%;
-      position:fixed;
-      width:100%;
-      top:0;
-      z-index:999;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    }
+/* HEADER */
 
-    .navbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#0057b8;
+  z-index:999;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-    .logo{
-      color:white;
-      font-size:24px;
-      font-weight:bold;
-    }
+.navbar{
+  width:90%;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:20px;
-      transition:0.3s;
-    }
+.logo{
+  color:white;
+  font-size:24px;
+  font-weight:bold;
+}
 
-    nav a:hover{
-      color:#cde1ff;
-    }
+nav{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
-    .hero{
-      height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop')
-      center/cover;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:white;
-      padding:20px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:18px;
+  transition:0.3s;
+  font-size:15px;
+}
 
-    .hero-content h1{
-      font-size:60px;
-      margin-bottom:20px;
-    }
+nav a:hover{
+  color:#cde1ff;
+}
 
-    .hero-content p{
-      font-size:22px;
-      margin-bottom:30px;
-    }
+.btn-warga{
+  background:white;
+  color:#0057b8 !important;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:bold;
+}
 
-    .btn{
-      display:inline-block;
-      padding:14px 30px;
-      background:#0d6efd;
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-      transition:0.3s;
-    }
+/* HERO */
 
-    .btn:hover{
-      background:#0046a3;
-    }
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop')
+  center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
 
-    section{
-      padding:90px 8%;
-    }
+.hero-content h1{
+  font-size:58px;
+  margin-bottom:20px;
+}
 
-    .title{
-      text-align:center;
-      margin-bottom:50px;
-    }
+.hero-content p{
+  font-size:22px;
+  margin-bottom:30px;
+}
 
-    .title h2{
-      font-size:38px;
-      color:#0057b8;
-      margin-bottom:10px;
-    }
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:#0d6efd;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
 
-    .tentang p{
-      max-width:900px;
-      margin:auto;
-      text-align:center;
-      line-height:1.8;
-      font-size:18px;
-    }
+.btn:hover{
+  background:#0046a3;
+}
 
-    .statistik{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-      margin-top:50px;
-    }
+/* SECTION */
 
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:15px;
-      text-align:center;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-      transition:0.3s;
-    }
+section{
+  padding:90px 8%;
+}
 
-    .card:hover{
-      transform:translateY(-5px);
-    }
+.title{
+  text-align:center;
+  margin-bottom:50px;
+}
 
-    .card h3{
-      font-size:40px;
-      color:#0057b8;
-      margin-bottom:10px;
-    }
+.title h2{
+  color:#0057b8;
+  font-size:38px;
+  margin-bottom:10px;
+}
 
-    .berita-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:30px;
-    }
+.title p{
+  color:#666;
+}
 
-    .news{
-      background:white;
-      border-radius:15px;
-      overflow:hidden;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
+/* TENTANG */
 
-    .news img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-    }
+.tentang{
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+  line-height:1.8;
+  font-size:18px;
+}
 
-    .news-content{
-      padding:20px;
-    }
+/* GRID */
 
-    .news-content h3{
-      margin-bottom:10px;
-      color:#0057b8;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
 
-    .galeri{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
+/* CARD */
 
-    .galeri img{
-      width:100%;
-      height:250px;
-      object-fit:cover;
-      border-radius:15px;
-      transition:0.3s;
-    }
+.card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
 
-    .galeri img:hover{
-      transform:scale(1.03);
-    }
+.card:hover{
+  transform:translateY(-5px);
+}
 
-    .kontak{
-      text-align:center;
-      line-height:2;
-      font-size:18px;
-    }
+.card h3{
+  color:#0057b8;
+  margin-bottom:15px;
+  font-size:24px;
+}
 
-    footer{
-      background:#003d82;
-      color:white;
-      text-align:center;
-      padding:30px;
-    }
+/* STATISTIK */
 
-    @media(max-width:768px){
+.statistik{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
 
-      .navbar{
-        flex-direction:column;
-      }
+.stat{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
 
-      nav{
-        margin-top:15px;
-      }
+.stat h3{
+  color:#0057b8;
+  font-size:40px;
+}
 
-      .hero-content h1{
-        font-size:38px;
-      }
+/* BERITA */
 
-      .hero-content p{
-        font-size:18px;
-      }
+.news{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
 
-    }
+.news img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
 
-  </style>
+.news-content{
+  padding:20px;
+}
+
+.news-content h3{
+  color:#0057b8;
+  margin-bottom:10px;
+}
+
+/* GALERI */
+
+.galeri{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.galeri img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.galeri img:hover{
+  transform:scale(1.03);
+}
+
+/* KONTAK */
+
+.kontak{
+  text-align:center;
+  line-height:2;
+  font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#003d82;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+  }
+
+  nav{
+    margin-top:15px;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:8px;
+  }
+
+  .hero-content h1{
+    font-size:38px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
 
+<!-- HEADER -->
+
 <header>
+
   <div class="navbar">
 
     <div class="logo">
@@ -233,15 +299,30 @@
     </div>
 
     <nav>
+
       <a href="#home">Home</a>
       <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#umkm">UMKM</a>
       <a href="#berita">Berita</a>
       <a href="#galeri">Galeri</a>
       <a href="#kontak">Kontak</a>
+
+      <a href="https://smart-desa.vercel.app/?portal=warga"
+         target="_blank"
+         class="btn-warga">
+
+         Portal Warga
+
+      </a>
+
     </nav>
 
   </div>
+
 </header>
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -250,7 +331,8 @@
     <h1>Website Resmi Desa Jatitujuh</h1>
 
     <p>
-      Kecamatan Jatitujuh - Pelayanan Desa Digital Modern
+      Kecamatan Jatitujuh - Kabupaten Majalengka - Provinsi Jawa Barat
+       Pelayanan Desa Digital Modern
     </p>
 
     <a href="#tentang" class="btn">
@@ -261,60 +343,43 @@
 
 </section>
 
+<!-- TENTANG -->
+
 <section id="tentang">
 
   <div class="title">
     <h2>Tentang Desa</h2>
     <p>Profil Singkat Desa Jatitujuh</p>
   </div>
-```html id="g7w8mk"
-<div style="margin-top:20px;">
-
-  <a href="#tentang" class="btn">
-    Jelajahi Desa
-  </a>
-
-  <a href="https://smart-desa.vercel.app/?portal=warga"
-     class="btn"
-     target="_blank"
-     style="margin-left:10px;background:#ffffff;color:#0057b8;">
-
-     Layanan Warga
-
-  </a>
-
-</div>
-```
 
   <div class="tentang">
 
     <p>
-      Desa Jatitujuh merupakan desa yang berkembang
-      dalam bidang pelayanan masyarakat, pembangunan,
-      digitalisasi administrasi desa, dan pengembangan
-      potensi ekonomi masyarakat lokal.
+      Desa Jatitujuh merupakan desa modern yang terus berkembang
+      dalam pelayanan masyarakat, digitalisasi administrasi desa,
+      dan pengembangan potensi ekonomi lokal masyarakat.
     </p>
 
   </div>
 
   <div class="statistik">
 
-    <div class="card">
+    <div class="stat">
       <h3>7.500+</h3>
       <p>Jumlah Penduduk</p>
     </div>
 
-    <div class="card">
+    <div class="stat">
       <h3>24</h3>
       <p>UMKM Desa</p>
     </div>
 
-    <div class="card">
+    <div class="stat">
       <h3>15</h3>
       <p>RT / RW</p>
     </div>
 
-    <div class="card">
+    <div class="stat">
       <h3>100%</h3>
       <p>Pelayanan Online</p>
     </div>
@@ -323,6 +388,170 @@
 
 </section>
 
+<!-- LAYANAN -->
+
+<section id="layanan">
+
+  <div class="title">
+    <h2>Layanan Warga</h2>
+    <p>Pelayanan Digital Cepat dan Mudah</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>Surat Online</h3>
+
+      <p>
+        Pengajuan surat domisili, surat usaha,
+        surat keterangan, dan administrasi desa
+        lainnya secara online.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Pengaduan Warga</h3>
+
+      <p>
+        Menyampaikan laporan, kritik, dan saran
+        masyarakat secara cepat dan transparan.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Informasi Desa</h3>
+
+      <p>
+        Informasi kegiatan desa, bantuan sosial,
+        pengumuman, dan pembangunan desa terbaru.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Pelayanan Cepat</h3>
+
+      <p>
+        Mendukung pelayanan masyarakat yang lebih
+        efisien melalui sistem digital desa modern.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- UMKM -->
+
+<section id="umkm">
+
+  <div class="title">
+    <h2>Produk UMKM Desa</h2>
+    <p>Produk Unggulan Masyarakat Desa Jatitujuh</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- PRODUK 1 -->
+
+    <div class="card">
+
+      <img
+      src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop"
+      style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
+
+      <br><br>
+
+      <h3>Keripik Singkong</h3>
+
+      <p>
+        Produk makanan ringan khas desa dengan rasa gurih
+        dan kualitas terbaik.
+      </p>
+
+      <br>
+
+      <a href="https://wa.me/6281234567890"
+         target="_blank"
+         class="btn">
+
+         Pesan Sekarang
+
+      </a>
+
+    </div>
+
+    <!-- PRODUK 2 -->
+
+    <div class="card">
+
+      <img
+      src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop"
+      style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
+
+      <br><br>
+
+      <h3>Kopi Lokal Desa</h3>
+
+      <p>
+        Kopi pilihan hasil petani lokal dengan aroma
+        khas dan kualitas premium.
+      </p>
+
+      <br>
+
+      <a href="https://tokopedia.com"
+         target="_blank"
+         class="btn">
+
+         Lihat Produk
+
+      </a>
+
+    </div>
+
+    <!-- PRODUK 3 -->
+
+    <div class="card">
+
+      <img
+      src="https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=1200&auto=format&fit=crop"
+      style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
+
+      <br><br>
+
+      <h3>Kerajinan Tangan</h3>
+
+      <p>
+        Produk kerajinan masyarakat desa dengan desain
+        kreatif dan berkualitas.
+      </p>
+
+      <br>
+
+      <a href="https://instagram.com"
+         target="_blank"
+         class="btn">
+
+         Kunjungi UMKM
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BERITA -->
+
 <section id="berita">
 
   <div class="title">
@@ -330,19 +559,21 @@
     <p>Informasi dan Kegiatan Desa</p>
   </div>
 
-  <div class="berita-grid">
+  <div class="grid">
 
     <div class="news">
 
       <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
 
       <div class="news-content">
+
         <h3>Pembangunan Infrastruktur</h3>
 
         <p>
           Pemerintah desa meningkatkan kualitas
-          pembangunan jalan desa dan fasilitas umum.
+          pembangunan jalan dan fasilitas umum.
         </p>
+
       </div>
 
     </div>
@@ -352,12 +583,14 @@
       <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
 
       <div class="news-content">
+
         <h3>Pelayanan Digital</h3>
 
         <p>
-          Warga kini dapat mengakses pelayanan administrasi
-          secara online melalui website desa.
+          Administrasi desa kini dapat diakses
+          secara online oleh masyarakat.
         </p>
+
       </div>
 
     </div>
@@ -367,12 +600,14 @@
       <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
 
       <div class="news-content">
+
         <h3>Pengembangan UMKM</h3>
 
         <p>
-          UMKM lokal mulai berkembang melalui program
-          digitalisasi dan promosi online desa.
+          UMKM lokal mulai berkembang melalui
+          digitalisasi promosi online desa.
         </p>
+
       </div>
 
     </div>
@@ -380,6 +615,8 @@
   </div>
 
 </section>
+
+<!-- GALERI -->
 
 <section id="galeri">
 
@@ -402,6 +639,8 @@
 
 </section>
 
+<!-- KONTAK -->
+
 <section id="kontak">
 
   <div class="title">
@@ -418,6 +657,8 @@
   </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
